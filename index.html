@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Employment Inequities | Home</title>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-title">
+                    <a href="home.html" id="title">Employment Inequities</a>
+                </div>
+                <div class="nav-main">
+                    <a href="home.html" class="active">Home</a>
+                    <a href="data.html">Data</a>
+                    <a href="essay.html">Essay</a>
+                    <a href="protest.html">Protest</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button id="menu-toggle">☰</button>
+            </nav>
+        </header>
+        <div id="hero-image-container" class="fade-in"><a href="#main" id="scroll-hero"><b>↓</b></a></div>
+        <main id="main" class="under-hero fade-in-up">
+            <h1>Home</h1>
+            <div class="content-card">
+                <h2>Welcome!</h2>
+                <p>Wecome to this website! With this website, I aim to let more people know that the numerous inequities in employment are a serious problem in our society and get them to &mdash; put simply &mdash; not be part of the problem.</p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Matthew Ketroser &mdash; <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a></p>
+        </footer>
+        <script>
+            const navMain = document.querySelector(".nav-main");
+            const menuToggle = document.getElementById("menu-toggle");
+
+            menuToggle.addEventListener("click", (event) => {
+                event.stopPropagation();
+                if (!navMain.classList.contains("open"))
+                {
+                    navMain.classList.add("open");
+                }
+            });
+            document.addEventListener("click", (event) => {
+                console.log(event.target)
+                if (event.target != navMain && navMain.classList.contains("open"))
+                {
+                    navMain.classList.remove("open");
+                }
+            });
+        </script>
+    </body>
+</html>
